@@ -60,6 +60,7 @@ class MP01AccessibilityService : AccessibilityService(),
                             commandRunner.runCommands(arrayOf(Commands.SPEED_CLEAR))
                         }, 50)
                     brightnessManager.turnOffBrightness()
+                    commandRunner.runCommands(arrayOf(Commands.FORCE_CLEAR, Commands.COMMIT_BITMAP))
                 }
                 Intent.ACTION_SCREEN_ON -> {
                     isScreenOn = true
